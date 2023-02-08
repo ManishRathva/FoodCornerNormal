@@ -1,0 +1,35 @@
+<html>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik+Vinyl&display=swap" rel="stylesheet">
+<style> @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fredoka+One&family=Rubik+Vinyl&display=swap'); </style>
+<header>
+    <div class="container-fluid">
+    <div>
+<p routerLink="/" class="logo">Food Corner</p>
+ </div>
+      <nav>
+        <ul>
+         <li>
+            <a routerLink="/gallary">Gallary</a>
+          </li>
+          <li>
+            <a routerLink="/feedback">Feedback</a>
+          </li>
+          <li>
+            <a routerLink="/contact">Contact-Us</a>
+          </li>
+          <li>
+            <a routerLink="/cart-page">
+              Cart <span>{{cartQuantity}}</span>
+            </a>
+          </li>
+           <li>
+            <a routerLink="/login"><i class="fa-solid fa-right-from-bracket"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  </html>

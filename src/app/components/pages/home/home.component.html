@@ -1,0 +1,141 @@
+<html>
+<head>
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<app-header></app-header>
+<app-search></app-search>
+<app-tags></app-tags>
+<app-not-found
+[visible]="!foods || !foods.length"
+resetLinkText="Reset Search">
+</app-not-found>
+<div class="container-fluid bg-light">
+  <div class="container-fluid  p-2 text-center mt-3 bg-light"><h1><span style="color:black;font-family: cursive;">Our Popular Dishes</span></h1></div>
+<ul>
+  <li *ngFor="let food of foods">
+    <a routerLink="/food/{{food.id}}">
+      <img [src]="food.imageUrl" [alt]="food.name" />
+      <div class="content">
+        <div class="name">
+          {{food.name}}
+        </div>
+        <div class="product-item-footer">
+         
+
+          <div class="cook-time">
+            <span>🕒</span>
+            {{food.cookTime}}
+          </div>
+        </div>
+        <div class="price">
+          <span>
+            {{food.price | currency:'INR'}}
+          </span>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>
+</div>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+crossorigin="anonymous"></script>
+<footer class="text-center text-white" style="background-color: black;">
+  <div class="row">
+    <div class="col-3 mt-5">
+         <p>
+        <img class="m1" src="assets/logo1.png">
+        </p>
+<span style="color: yellow;">ABOUT US</span>
+     <ul>
+        <li>
+          <p>Please Follow our page and our order services is mostly fast and good food-item deliver</p>
+        </li>
+      </ul>
+    </div>
+    <div class="col-3 mt-5">
+      <p>
+        <img class="m1" src="assets/service.jpg">
+        </p>
+      <span style="color: yellow;">SERVICES</span>
+    <ul>
+        <li>
+         <p>Deliver</p>
+         <p>Quality Food</p>
+         <p> Mixed</p>
+        </li>
+      </ul>
+    </div>
+    <div class="col-3 mt-5">
+      <p>
+        <img class="m1" src="assets/link.jpg">
+        </p>
+      <span style="color: yellow;">USE-FULL LINK</span>
+      <div class="container pt-4">
+        <!-- Section: Social media -->
+        <section class="mb-2">
+            <!-- Facebook -->
+            <a class="btn btn-link btn-floating btn-lg text-dark m-2"
+                href="https://www.facebook.com/" role="button"
+                style="background-color: #3b5998;" data-mdb-ripple-color="dark"><i
+                    class="fab fa-facebook-f"
+                    style="color: white;"></i></a>
+  
+            <!-- Twitter -->
+            <a class="btn btn-link btn-floating btn-lg text-dark m-2"
+                href="https://twitter.com/?lang=en-in"
+                role="button" style="background-color: #55acee;"
+                data-mdb-ripple-color="dark"><i class="fab fa-twitter"
+                    style="color: white;"></i></a>
+  
+            <!-- Google -->
+            <a class="btn btn-link btn-floating btn-lg text-dark m-2"
+                href="https://www.google.com/" role="button"
+                style="background-color: #dd4b39;" data-mdb-ripple-color="dark"><i
+                    class="fab fa-google"
+                    style="color: white;"></i></a>
+  
+            <!-- Instagram -->
+            <a class="btn btn-link btn-floating btn-lg text-dark m-2"
+                href="https://www.instagram.com/" role="button"
+                style="background-color: #ac2bac;" data-mdb-ripple-color="dark"><i
+                    class="fab fa-instagram"
+                    style="color: white;"></i></a>
+  
+        </section>
+    </div>
+    </div>
+    <div class="col mt-5">
+      <p>
+        <img class="m1" src="assets/question.png">
+        </p>
+      <span style="color: yellow;">HAVE A QUESTION?</span>
+      <div>
+        <ul>
+          <li>
+           <p>
+            <i class="fa-solid fa-location-dot"></i>
+            Bhandu</p>
+           <p><i class="fa-solid fa-phone-volume"></i>
+            12345678</p>
+           <p><i class="fa-regular fa-envelope"></i>
+            Foodorder@gmail.com</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<div class="text-center p-2 m2" style="background-color:black;">
+    © <span style="color:red;"> 2022</span>Copyright
+    <a><span style="color:red;"> Manish</span>Rathva</a>
+</div>
+</footer>
+</html>

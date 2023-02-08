@@ -1,0 +1,37 @@
+{
+  "posts": [],
+  "signup": [
+    {
+      "name": "manish",
+      "email": "manish@gmail.com",
+      "mobile": "123456",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "name": "manish",
+      "email": "manish@gmail.com",
+      "mobile": "1234567",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "name": "manish",
+      "email": "manish@gmail.com",
+      "mobile": "12345678",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "name": "soni prem",
+      "email": "soni@gmail.com",
+      "mobile": "3546356583",
+      "password": "12345",
+      "id": 4
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

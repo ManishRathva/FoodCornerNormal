@@ -1,0 +1,69 @@
+<section class="vh-200 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-4 text-center">
+                        <div class="mb-md-0 mt-md-1 pb-1">
+                            <div class="text-center">
+                                <h1>Restaurant Signup Page</h1>
+                                <hr>
+                            </div>
+                            <form [formGroup]="signupForm" (ngSubmit)="signup()">
+                                <div class="form-group">
+                                    <th>
+                                        <label class="form-label">User Name</label>
+                                    </th>
+                                    <input formControlName="name" type="email" class="form-control"
+                                        id="exampleInputEmail1" placeholder="Enter User Name">&nbsp;
+                                    <span class="text-danger"
+                                        *ngIf="signupForm.controls['name'].dirty && signupForm.hasError('required','name')">*name
+                                        is required</span>
+
+                                </div>
+                                <div class="form-group">
+                                    <th>
+                                        <label class="form-label">Mobile Number</label>
+                                    </th>
+                                    <input formControlName="mobile" type="email" class="form-control"
+                                        id="exampleInputEmail1" placeholder="Enter Mobile Number">&nbsp;
+                                    <span class="text-danger"
+                                        *ngIf="signupForm.controls['mobile'].dirty && signupForm.hasError('required','mobile')">*Mobile
+                                        number is required</span>
+
+                                </div>
+                                <div class="form-group">
+                                    <th>
+                                        <label class="form-label">Email Id</label>
+                                    </th>
+                                    <input formControlName="email" type="email" class="form-control"
+                                        id="exampleInputEmail1" aria-describedby="emailHelp"
+                                        placeholder="Enter E-mail Id" value="id" required>&nbsp;
+                                    <span class="text-danger"
+                                        *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">*Email
+                                        is required</span>
+                                </div>
+                                <div class="form-group">
+                                    <th>
+                                        <label class="form-label">Password</label>
+                                    </th>
+                                    <input formControlName="password" type="password" class="form-control"
+                                        id="exampleInputPassword1" placeholder="Enter Password">
+                                    <span class="text-danger"
+                                        *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">*password
+                                        is required</span>
+                                    </div>
+                                <br>&nbsp;
+                                <button type="submit" onclick="validation()" [disabled]="!signupForm.valid"
+                                    class="btn btn-primary">Signup</button>
+                            </form>
+                            <br>
+                            <a routerLink="/login"><span style="color: red;text-decoration:none;"> Already Member ?
+                                    Click to login!</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

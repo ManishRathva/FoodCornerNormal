@@ -1,0 +1,6 @@
+<div class="container-fluid">
+  <input #s type="text" placeholder="Search Food Items"
+   (keyup.enter)="search(s.value)"
+   [value]="searchTerm" />
+  <button (click)="search(s.value)">Search</button>
+</div>
