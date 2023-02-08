@@ -17,7 +17,7 @@
                                     </th>
                                         <input formControlName="email" type="email" class="form-control" id="email" placeholder="Enter email" required="">
                                         <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email is required</span>
-            
+
                                          <br>
                                     </div>
                                     <div class="form-group">
@@ -26,9 +26,9 @@
                                     </th>
                                         <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                                         <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*password is required</span>&nbsp;
-            
+
                                     </div>
-                                   
+
                                     <button type="submit" onclick="validation()" [disabled]="!loginForm.valid" class="btn btn-primary btn-lg btn-block">Login</button>
                                 </form>
                             </div>
@@ -38,16 +38,16 @@
                                                 class="text-white-50 fw-bold">Sign Up</a>
                                         </p>
                                  </div>
-                             
+
                         </div>
-                                
-                                
-                     
+
+
+
                     </div>
                 </div>
             </div>
-         
+
         </div>
     </div>
-            
+
 </section>

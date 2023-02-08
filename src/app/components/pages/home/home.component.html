@@ -20,14 +20,14 @@ resetLinkText="Reset Search">
   <div class="container-fluid  p-2 text-center mt-3 bg-light"><h1><span style="color:black;font-family: cursive;">Our Popular Dishes</span></h1></div>
 <ul>
   <li *ngFor="let food of foods">
-    <a routerLink="/food/{{food.id}}">
+    <a routerLink="/product">
       <img [src]="food.imageUrl" [alt]="food.name" />
       <div class="content">
         <div class="name">
           {{food.name}}
         </div>
         <div class="product-item-footer">
-         
+
 
           <div class="cook-time">
             <span>🕒</span>
@@ -88,28 +88,28 @@ crossorigin="anonymous"></script>
                 style="background-color: #3b5998;" data-mdb-ripple-color="dark"><i
                     class="fab fa-facebook-f"
                     style="color: white;"></i></a>
-  
+
             <!-- Twitter -->
             <a class="btn btn-link btn-floating btn-lg text-dark m-2"
                 href="https://twitter.com/?lang=en-in"
                 role="button" style="background-color: #55acee;"
                 data-mdb-ripple-color="dark"><i class="fab fa-twitter"
                     style="color: white;"></i></a>
-  
+
             <!-- Google -->
             <a class="btn btn-link btn-floating btn-lg text-dark m-2"
                 href="https://www.google.com/" role="button"
                 style="background-color: #dd4b39;" data-mdb-ripple-color="dark"><i
                     class="fab fa-google"
                     style="color: white;"></i></a>
-  
+
             <!-- Instagram -->
             <a class="btn btn-link btn-floating btn-lg text-dark m-2"
                 href="https://www.instagram.com/" role="button"
                 style="background-color: #ac2bac;" data-mdb-ripple-color="dark"><i
                     class="fab fa-instagram"
                     style="color: white;"></i></a>
-  
+
         </section>
     </div>
     </div>
